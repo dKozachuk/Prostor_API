@@ -1,0 +1,119 @@
+<p><span style="font-weight: 400;">Для работы с сервисом авторизации в GET запросе используется </span><span style="font-weight: 400;">Basic</span><span style="font-weight: 400;"> авторизация.</span></p>
+<p><span style="font-weight: 400;">(Получить код авторизации необходимо у ответственного сотрудника компании &laquo;Стиль Д&raquo;)</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">GET</span></p>
+<p><span style="font-weight: 400;">https://api.prostor.ua/api/hs/AuthService/v1/login</span></p>
+<p><span style="font-weight: 400;">Request headers</span></p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Название</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Тип</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Описание</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Authorization</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">String</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Authorization header</span></p>
+<p><span style="font-weight: 400;">Допустимые значения: &ldquo;Basic value&rdquo;. Например:</span></p>
+<p><span style="font-weight: 400;">Basic YWhhbWlsdG9uQGFwaWdlZS5jb206bXlwYXNzdzByZAo</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">papiauth</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">string(36)</span></p>
+</td>
+<td>
+<p><strong>Для клиента мобильного приложения.</strong><span style="font-weight: 400;"> Ключ, который использовался при ОТП авторизации конкретного пользователя в заголовке papiauth. Предназначен для идентификации клиента.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">Ответ сервера (Success 200)</span></p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Название</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Тип</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Описание</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Success</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">boolean</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Результат запроса.</span></p>
+<p><span style="font-weight: 400;">&ldquo;true&rdquo; - успешный запрос</span></p>
+<p><span style="font-weight: 400;">&ldquo;false&rdquo; - ошибка</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Response/KEY</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">String(36)</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Ключ доступа к сервису получения баланса (ограничен по времени)</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Error</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">String</span></p>
+</td>
+<td>
+<p><span style="font-weight: 400;">Описание ошибки.</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример запроса/ответа сервиса:&nbsp;</strong></p>
+<p><strong>Запрос:</strong></p>
+<p><a href="https://api.prostor.ua/api/hs/AuthService"><span style="font-weight: 400;">https://api.prostor.ua/api/hs/AuthService</span></a></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"Host": "api.prostor.ua",</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"Cache-Control": "no-cache",</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"Connection": "close",</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"Accept-Encoding": "gzip, deflate, br",</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"Accept": "*/*",</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"Authorization": "Basic YWhhbWlsdG9uQGFwaWdlZS5jb206bXlwYXNzdzByZAo ",</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"Content-Length": "0"</span></p>
+<p><strong>Ответ:</strong></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"Content-type": "application/json; charset=utf-8"</span></p>
+<p><span style="font-weight: 400;">{</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"success": "true",</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"response": {</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"KEY": "f6595522-dfa6-407b-b15f-7cb4ae18ebbb"</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;},</span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;"error": ""</span></p>
+<p><span style="font-weight: 400;">}</span></p>
+<p><strong>Пример запроса с использованием CURL:</strong></p>
+<p><strong>curl --location --request GET 'https://api.prostor.ua/api/hs/AuthService/v1/login' \</strong></p>
+<p><strong>--header 'Authorization: Basic cG9saWNhcmQ6S3JlY2hldG92aWNo' \&nbsp; --data-raw ''</strong></p>
