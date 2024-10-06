@@ -1223,7 +1223,7 @@ https://api.prostor.ua/api/hs/PurchaseList/v1/LastPurchase/
 }
 ```
 **Пример запроса с использованием CURL:**
-```
+```json
 curl --location --request POST 'https://api.prostor.ua/api/hs/PurchaseList/v1/detailPurchase/' \
 --header 'papiauth: d4b8b220-659f-4e0f-a218-aafc5d33dfc3' \
 --header 'Authorization: Basic QWRtaW5pc3RyYXRvcjp6YXExMjM=' \
@@ -1235,7 +1235,7 @@ curl --location --request POST 'https://api.prostor.ua/api/hs/PurchaseList/v1/de
 ```
 ---
 
-## <a link="title8"> 8. Сервис получения списка работающих магазинов </a>
+## <a id="title8"> 8. Сервис получения списка работающих магазинов </a>
 `GET`
 ```json
 https://api.prostor.ua/api/hs/prostorbot/v1/GetStores
@@ -1298,7 +1298,7 @@ Success | `boolean` | Результат запроса. <br> “true” - ус�
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;after_deadline | string() | Дата доставки при заказе после часа заказа
 Error | string() | Описание ошибки. <br> **“token_invalid”** – в заголовке передан неправильный ключ или действие ключа истекло, код ответа в данном случае 401.
 
-## <a link="title9"> 9. Сервис получения цены товара </a>
+## <a id="title9"> 9. Сервис получения цены товара </a>
 `POST`
 ```json
 https://api.prostor.ua/api/hs/prostorbot/v1/GetPrice
@@ -1367,7 +1367,7 @@ curl --location --request POST 'https://api.prostor.ua/api/hs/prostorbot/v1/GetP
 ```
 ---
 
-## <a link="title10"> 10. Сервис получения заказов клиента </a>
+## <a id="title10"> 10. Сервис получения заказов клиента </a>
 `POST`
 ```json
 https://api.prostor.ua/api/hs/prostorbot/v1/GetOrders
@@ -1477,7 +1477,7 @@ curl --location --request POST 'https://api.prostor.ua/api/hs/prostorbot/v1/GetO
 ```
 ---
 
-## <a linl="title11"> 11. Процессинг покупок и возвратов </a>
+## <a id="title11"> 11. Процессинг покупок и возвратов </a>
 Данный сервис используется для препроцессинга покупок и возвратов в CRM системе компании Prostor.
 `POST`
 ```json
