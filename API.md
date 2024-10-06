@@ -300,7 +300,7 @@ https://api.prostor.ua/api/hs/BalanceInfo
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST 'https://api.prostor.ua/api/hs/BalanceInfo/v1/uplid/' \
 --header 'papiauth: 3fbc75c3-9064-43e7-be21-63740fbe2cdb' \
 --header 'Authorization: Basic cG9saWNhcmQ6S3JlY2hldG92aWNo' \
@@ -685,7 +685,7 @@ https://api.prostor.ua/api/hs/AddContact/v1/addupl/
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST 'https://api.prostor.ua/api/hs/AddContact/v1/addupl/' \
 --header 'papiauth: 9cec856a-6c8b-4f27-86c7-f83feeebba76' \
 --header 'Authorization: Basic YWhhbWlsdG9uQGFwaWdlZS5jb206bXlwYXNzdzByZAo' \
@@ -795,7 +795,7 @@ https://api.prostor.ua/api/hs/EditContactInfo/v1/edituplinfo/
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST https://api.prostor.ua/api/hs/AddContact/v1/addupl/' \
 --header 'papiauth: 9cec856a-6c8b-4f27-86c7-f83feeebba76' \
 --header 'Authorization: Basic cG9saWNhcmQ6emFxMTIz' \
@@ -905,7 +905,7 @@ https://api.prostor.ua/api/hs/PurchaseList/v1/list/
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST 'https://api.prostor.ua/api/hs/PurchaseList/v1/list/' \
 --header 'papiauth: 3b9837d4-1ff9-4994-87fd-50efe25bfbbd' \
 --header 'Authorization: Basic QWRtaW5pc3RyYXRvcjp6YXExMjM=' \
@@ -1032,7 +1032,7 @@ https://api.prostor.ua/api/hs/PurchaseList/v1/LastPurchase/
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST 'https://api.prostor.ua/api/hs/PurchaseList/v1/LastPurchase/' \
 --header 'papiauth: d4b8b220-659f-4e0f-a218-aafc5d33dfc3' \
 --header 'Authorization: Basic QWRtaW5pc3RyYXRvcjp6YXExMjM=' \
@@ -1223,7 +1223,7 @@ https://api.prostor.ua/api/hs/PurchaseList/v1/LastPurchase/
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST 'https://api.prostor.ua/api/hs/PurchaseList/v1/detailPurchase/' \
 --header 'papiauth: d4b8b220-659f-4e0f-a218-aafc5d33dfc3' \
 --header 'Authorization: Basic QWRtaW5pc3RyYXRvcjp6YXExMjM=' \
@@ -1355,7 +1355,7 @@ Error | string() | Описание ошибки. <br> **“token_invalid”** �
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST 'https://api.prostor.ua/api/hs/prostorbot/v1/GetPrice' \
 --header 'papiauth: 56579efe-7d48-4887-bc73-be2e26b59877' \
 --header 'Authorization: Basic QWRtaRvcjp6M=' \
@@ -1465,7 +1465,7 @@ Success | `boolean` | Результат запроса. <br> “true” - ус�
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST 'https://api.prostor.ua/api/hs/prostorbot/v1/GetOrders' \
 --header 'papiauth: 56579efe-7d48-4887-bc73-be2e26b59877' \
 --header 'Authorization: Basic Q3RyYXRvcjpM=' \
