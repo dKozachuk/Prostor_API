@@ -1223,7 +1223,7 @@ https://api.prostor.ua/api/hs/PurchaseList/v1/LastPurchase/
 }
 ```
 **Пример запроса с использованием CURL:**
-```json
+```
 curl --location --request POST 'https://api.prostor.ua/api/hs/PurchaseList/v1/detailPurchase/' \
 --header 'papiauth: d4b8b220-659f-4e0f-a218-aafc5d33dfc3' \
 --header 'Authorization: Basic QWRtaW5pc3RyYXRvcjp6YXExMjM=' \
