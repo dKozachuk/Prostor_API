@@ -33,7 +33,7 @@ Date| Service| Change| Version
 (Получить код авторизации необходимо у ответственного сотрудника компании «Prostor»)
 
 `GET`
-```json
+```js
 https://api.prostor.ua/api/hs/AuthService/v1/login
 ```
 ### Request headers
