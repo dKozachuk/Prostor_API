@@ -75,7 +75,7 @@ https://api.prostor.ua/api/hs/AuthService
 }
 ```
 *Пример запроса с использованием CURL:*
-```json
+```
 curl --location --request GET 'https://api.prostor.ua/api/hs/AuthService/v1/login' \
 --header 'Authorization: Basic cG9saWNhcmQ6S3JlY2hldG92aWNo' \  --data-raw
 ```
